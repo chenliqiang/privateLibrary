@@ -1,0 +1,521 @@
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+}
+
+html,body,#app{
+    height: 100%;
+    overflow: hidden;
+}
+
+.jui-bg {
+    background-color: #efeff4;
+}
+
+.jui-icons-nav {
+    display: -webkit-box;
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.jui-icons-nav a {
+    display: block;
+    color: #333333;
+    border-radius: 10px;
+    width: 25%;
+}
+
+.jui-icons-nav b {
+    height: 50px;
+    width: 50px;
+    margin: 0 auto;
+    display: block;
+    background-image: url(../images/index-icons.png);
+    background-size: cover;
+}
+
+.jui-icons-nav .icons-wzz {
+    background-position: -5px 0;
+}
+
+.jui-icons-nav .icons-wzx {
+    background-position: -88px 0;
+}
+
+.jui-icons-nav .icons-wsh {
+    background-position: -170px 0;
+}
+
+.jui-icons-nav .icons-wkf {
+    background-position: -252px 0;
+}
+
+.jui-state-table {
+    padding: 10px;
+}
+
+.jui-state-table table {
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+}
+
+.jui-state-table th,
+td {
+    height: 35px;
+    line-height: 35px;
+}
+
+.jui-state-table th {
+    background-color: #b4e0ff;
+    font-weight: normal;
+}
+
+.jui-tel-btn {
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+    background-color: #1c9bde;
+}
+
+.jui-tel-btn a {
+    color: #fff;
+}
+
+.jui-add-binding {
+    position: absolute;
+    right: 25px;
+}
+
+.jui-add-binding img:active {
+    background-color: #e6e7e9;
+}
+
+.jui-add-binding img {
+    height: 21px;
+    padding-bottom: 2px;
+}
+
+.jui-btn-binding {
+    padding: 5px 0;
+    margin-top: 15px;
+}
+
+.jui-btn-sub {
+    right: 80px !important;
+}
+
+.jui-nav-bar {
+    padding-left: 40px !important;
+}
+
+.jui-nav-bar2 {
+    padding-left: 65px !important;
+}
+
+.jui-icons {
+    height: 20px;
+    width: 20px;
+    display: block;
+    position: absolute;
+    left: 10px;
+    background-image: url(../images/main-icons.png);
+    background-size: 250px auto;
+}
+
+.jui-icons-change {
+    background-position: -152px -5px;
+}
+
+.jui-icons-satisfy {
+    background-position: -178px -5px;
+}
+
+.jui-icons-complain {
+    background-position: -202px -5px;
+}
+
+.jui-icons-activities {
+    background-position: -227px -5px;
+}
+
+.jui-icons-binding {
+    background-position: -2px -32px;
+}
+
+.jui-select {
+    position: absolute;
+    right: 15px;
+    line-height: 40px;
+    color: #bbb;
+}
+
+.jui-icons-zhbd {
+    background-position: -2px -6px;
+}
+
+.jui-icons-sfcx {
+    background-position: -26px -5px;
+}
+
+.jui-icons-sqcx {
+    background-position: -52px -5px;
+}
+
+.jui-icons-ywbl {
+    background-position: -76px -8px;
+}
+
+.jui-icons-links1 {
+    background-position: -52px -107px;
+}
+
+.jui-icons-links2 {
+    background-position: -75px -106px;
+}
+
+.jui-icons-links3 {
+    background-position: -102px -105px;
+}
+
+.jui-icons-ywcx {
+    background-position: -225px -31px;
+}
+
+.jui-icons-zxhd {
+    background-position: -102px -5px;
+}
+
+.jui-icons-yywd {
+    background-position: -126px -5px;
+}
+
+.jui-icons-jdcx {
+    background-position: -26px -32px;
+}
+
+.jui-icons-jmysxz {
+    background-position: -52px -32px;
+}
+
+.jui-icons-jmysgz {
+    background-position: -76px -31px;
+}
+
+.jui-icons-wzysjb {
+    background-position: -102px -32px;
+}
+
+.jui-icons-bzsq {
+    background-position: -126px -32px;
+}
+
+.jui-icons-tjsq {
+    background-position: -152px -32px;
+}
+
+.jui-icons-lsjb {
+    background-position: -176px -32px;
+}
+
+.jui-icons-bxsq {
+    background-position: -202px -32px;
+}
+
+.jui-icons-mhwz {
+    background-position: -102px -56px;
+}
+
+.jui-icons-dzwb {
+    background-position: -127px -56px;
+}
+
+.jui-icons-qyzc {
+    background-position: -152px -56px;
+}
+
+.jui-icons-swwh {
+    background-position: -177px -56px;
+}
+
+.jui-icons-yqlj {
+    background-position: -202px -56px;
+}
+
+.jui-tab-icons {
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    position: absolute;
+    background-image: url(../images/main-icons.png);
+    background-size: 250px auto;
+    margin-bottom: -2px;
+}
+
+.mui-active .jui-icon-wzz {
+    background-position: -2px -53px;
+}
+
+.jui-icon-wzz {
+    background-position: -2px -78px;
+}
+
+.mui-active .jui-icon-wzx {
+    background-position: -26px -53px;
+}
+
+.jui-icon-wzx {
+    background-position: -26px -78px;
+}
+
+.mui-active .jui-icon-wsh {
+    background-position: -50px -53px;
+}
+
+.jui-icon-wsh {
+    background-position: -50px -78px;
+}
+
+.mui-active .jui-icon-wkf {
+    background-position: -74px -53px;
+}
+
+.jui-icon-wkf {
+    background-position: -74px -78px;
+}
+
+.unhappy {
+    border-radius: 3px;
+    border: 1px dashed #ff4848 !important;
+}
+
+.comment_nav {
+    clear: both;
+    border-bottom: 1px solid #d7d7d7;
+    line-height: 38px;
+    position: relative;
+}
+
+.clearfix:after {
+    content: '\0020';
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.comment_nav_main {
+    padding: 0 2px;
+    clear: both;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.comment_nav_main li {
+    display: block;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+    color: #333;
+    line-height: 38px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 25%;
+}
+
+.comment_nav_main a {
+    text-decoration: none;
+    color: #1a1a1a;
+}
+
+.comment_nav_main a.active {
+    text-decoration: none;
+    color: #3990e6;
+}
+
+.comment_nav_main a:hover, .comment_nav_main a:active,
+.comment_nav_main a:focus {
+    color: #3990e6;
+    text-decoration: none;
+}
+
+.fixednav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 800;
+    background: #f9f9f9;
+    opacity: .95;
+}
+
+.hide {
+    display: none !important;
+}
+
+.error {
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    border: 1px solid #a94442;
+}
+
+.nav-bar a {
+    padding-left: 40px !important;
+}
+
+.jui-state-table-1 {
+    padding: 10px;
+}
+
+.jui-state-table-1 table {
+    width: 100%;
+    background-color: #fff;
+}
+
+.jui-state-table-1 th,
+td {
+    height: 35px;
+    line-height: 35px;
+    font-size: smaller;
+}
+
+.jui-state-table-1 td:nth-child(2n+1) {
+    text-align: center;
+}
+
+.jui-state-table-1 td:nth-child(2n) {
+    font-weight: bold;
+}
+
+.jui-state-table-1 th {
+    background-color: #b4e0ff;
+    font-weight: normal;
+}
+
+.jui-state-table-2 {
+    padding: 10px;
+}
+
+.jui-state-table-2 table {
+    width: 100%;
+    background-color: #fff;
+}
+
+.jui-state-table-2 th,
+td {
+    height: 35px;
+    line-height: 35px;
+    font-size: 13px;
+}
+
+.jui-state-table-2 td:nth-child(2n+1) {
+    text-align: center;
+    color: #CCCCCC;
+}
+
+.jui-state-table-2 td:nth-child(2n) {
+    color: #ff9933;
+    font-weight: bold;
+}
+
+.jui-tel-btn-1 {
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+    background-color: #ff9933;
+}
+
+.jui-tel-btn-1 a {
+    color: #fff;
+}
+
+.mui-icon-left-nav, .mui-icon-home-filled {
+    color: #333333;
+}
+
+#jui-tool {
+    position: fixed;
+    bottom: 65px;
+    right: 15px;
+    z-index: 1001;
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #1C9BDE;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+}
+
+#jui-tool a {
+    color: #fff;
+}
+
+#jui-tool:active {
+    background-color: #0078e7;
+}
+
+.jui-table {
+    border-collapse: collapse;
+    border: none;
+}
+
+.jui-table th, .jui-table td {
+    border: solid #E1E1E1 1px;
+}
+
+.mui-bar-tab .mui-tab-item.mui-active {
+    color: #1c9bde !important;
+}
+
+.mui-ellipsis-3 {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    white-space: normal !important;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+#detail-content * {
+    text-align: left;
+}
+
+.jui-group {
+    position: absolute;
+    width: 30px;
+    left: 0;
+    top: 60px;
+    background-color: #BEB9B3;
+    z-index: 11;
+    color: #fff;
+    text-align: center;
+    padding-top: 106px;
+    font-weight: bold;
+}
+
+.jui-logo {
+    height: 30px;
+    vertical-align : middle;
+    margin-bottom: 10px;
+    margin-right: 5px;;
+}
+
+#search-type .mui-active{
+    font-weight: bold;
+}

@@ -1,0 +1,40 @@
+<div class="page-handle-leakage">
+
+
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-icon mui-icon-left-nav mui-pull-left" href="#business/handle"></a>
+        <h1 class="mui-title">漏水举报</h1>
+
+    </header>
+    <div class="mui-content-padded mui-content" >
+        <form class="mui-input-group" id="form-leakage" action="/">
+            <div class="mui-input-row">
+                <label>联&nbsp;&nbsp;系&nbsp;&nbsp;人</label>
+                <input type="text" v-model="form.contact" class="mui-input-clear" required placeholder="请输入联系人" msg="请输入联系人">
+            </div>
+            <div class="mui-input-row">
+                <label>联系电话</label>
+                <input type="text" validator="mobile" v-model="form.tel" class="mui-input-clear" style="padding: 10px 15px 10px 0px;" required placeholder="请输入联系电话">
+            </div>
+            <div class="mui-input-row">
+                <label>漏水地址</label>
+                <input type="text" v-model="form.addr" class="mui-input-clear" placeholder="请输入漏水地址" required>
+            </div>
+
+            <div class="mui-input-row" style="height: auto;">
+                <label>情况描述</label>
+                <textarea v-model="form.desc" rows="5" required placeholder="请输入情况描述"></textarea>
+            </div>
+            <div class="mui-input-row" style="height: auto;">
+                <label>上传图片</label>
+                <input type="file"  v-on="change:onUpload" style="margin-top: 5px;" name="uploadFile" accept="image/*" capture="camera" accept="jpg,jpeg,png" />
+                <div class="mui-table-cell mui-col-xs-2">
+                    <p style="font-size: small;">上传的图片格式只能是(.jpg),(.jpeg),(.png)</p>
+                </div>
+            </div>
+
+        </form>
+
+        <button id="confirm" type="submit" form="form-leakage" class="mui-btn mui-btn-primary" style="margin-top:20px;width: 100%;">提交</button>
+    </div>
+</div>

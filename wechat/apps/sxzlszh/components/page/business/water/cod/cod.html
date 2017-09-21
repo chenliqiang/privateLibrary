@@ -1,0 +1,24 @@
+<div class="water-doc">
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-icon mui-icon-left-nav mui-pull-left" href="#business/water"></a>
+        <h1 class="mui-title">浓度查询</h1>
+    </header>
+    <div v-if="bindlist.length==0" class="mui-content" style="text-align: center;margin-top: 20px;">
+        <h4>请先绑定用户号</h4>
+        <a class="mui-btn mui-btn-primary" style="margin-top: 10px;" href="#business/bind/add">去绑定</a>
+    </div>
+    <div v-show="bindlist.length>0" class="mui-content-padded" style="margin-top: 60px;" >
+        <form id="form-doc" class="mui-input-group">
+            <div class="mui-input-row">
+                <label>用户号</label>
+                <select v-model="token" id="cod-token" options="bindlist | extract"></select>
+            </div>
+            <div class="mui-input-row">
+                <label>时间</label>
+                <input type="text" class="mui-input-clear" id="cod-date" placeholder="请选择日期" required>
+            </div>
+        </form>
+        <button type="submit" form="form-doc" id="btn-query" class="mui-btn mui-btn-block jui-btn-binding mui-btn-primary">查询
+        </button>
+    </div>
+</div>

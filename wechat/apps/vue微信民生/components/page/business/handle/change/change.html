@@ -1,0 +1,44 @@
+<div class="page-handle-reform">
+
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-icon mui-icon-left-nav mui-pull-left" href="#business/handle"></a>
+        <h1 class="mui-title">用水性质变更申请</h1>
+
+    </header>
+    <div class="mui-content-padded mui-content" >
+        <form class="mui-input-group" id="form-change">
+
+            <div class="mui-input-row">
+                <label>用&nbsp;&nbsp;户&nbsp;&nbsp;号</label>
+                <input type="text" v-model="form.sn" validator="number" class="mui-input-clear" required placeholder="请输入用户号">
+
+            </div>
+            <div class="mui-input-row">
+                <label>戶&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</label>
+                <input type="text" v-model="form.name" class="mui-input-clear" required placeholder="请输入户名">
+            </div>
+            <div class="mui-input-row">
+                <label>水表地址</label>
+                <input type="text" v-model="form.addr" class="mui-input-clear" required placeholder="请输入水表地址">
+            </div>
+            <div class="mui-input-row">
+                <label>联系电话</label>
+                <input type="text" v-model="form.tel" validator="mobile" class="mui-input-clear" required placeholder="请输入联系电话">
+            </div>
+
+            <div class="mui-input-row" style="height: auto;">
+                <label>申请需求</label>
+                <textarea form="form-change" v-model="form.desc" rows="5" required placeholder="请输入申请需求"></textarea>
+            </div>
+            <div class="mui-input-row" style="height: auto;">
+                <label>附加图片</label>
+                <input type="file" v-on="change:onUpload"  style="margin-top: 5px;" name="uploadFile" accept="image/*" capture="camera" />
+                <div class="mui-table-cell mui-col-xs-2">
+                    <p style="font-size: small;">上传的图片格式只能是(.jpg),(.jpeg),(.png)</p>
+                </div>
+            </div>
+        </form>
+        <button type="submit" form="form-change" id="confirm" class="mui-btn  mui-btn-primary" style="width: 100%;margin-top:20px;">提交</button>
+    </div>
+
+</div>

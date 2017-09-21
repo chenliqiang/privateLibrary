@@ -1,0 +1,39 @@
+<div class="page-month">
+    <header class="mui-bar mui-bar-nav">
+        <!--<a class="mui-icon mui-icon-left-nav mui-pull-left" href="#business"></a>-->
+        <h1 class="mui-title">月用水量查询</h1>
+    </header>
+
+    <div class="mui-content-padded" style="margin-top: 60px;">
+        <div style='text-align: center;margin-top: 20px;'  v-if="sn.length == 0&&hasQuery" >
+            <h4>请先绑定户号</h4>
+            <a class="mui-btn mui-btn-primary" style="margin-top: 10px;" href="#business/bind">去绑定</a>
+        </div>
+        <form id="formSubmit" class="mui-input-group"  v-if="sn.length > 0">
+            <div class="mui-input-row">
+                <label>户号</label>
+                <select v-model="selectSn" options="sn">
+                </select>
+            </div>
+        </form>
+    </div>
+    <div class="mui-content-padded" style="background-color: #fff">
+        <table class="jui-table" >
+            <thead>
+            <tr>
+                <th>月份</th>
+                <th>用水量(吨)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-repeat="l in list">
+                <td>{{l.usePeriod | format}}</td>
+                <td>{{l.usedCount}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="history-container">
+    </div>
+
+</div>

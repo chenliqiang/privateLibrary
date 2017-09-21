@@ -1,0 +1,28 @@
+<div class="query-progress-detail">
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">查询结果</h1>
+    </header>
+    <div class="mui-content">
+        <form class="mui-input-group">
+            <div v-repeat="l in list">
+                <div class="mui-input-row">
+                    <label>工程编号:</label>
+                    <input type="text" style="color: #1C9BDE" value="{{l.id}}">
+                </div>
+                <div class="mui-input-row" style="height: auto;">
+                    <label>工程名称:</label>
+                    <textarea rows="auto" style="color: #1C9BDE">{{l.name}}</textarea>
+                </div>
+                <div class="mui-input-row" style="height: auto;">
+                    <label>工程地址:</label>
+                    <textarea rows="auto" style="color: #1C9BDE">{{l.addr}}</textarea>
+                </div>
+                <div class="mui-input-row" style="height: auto;">
+                    <label>环节进度:</label>
+                    <input type="text" style="color: #1C9BDE" value="{{l.status}}">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

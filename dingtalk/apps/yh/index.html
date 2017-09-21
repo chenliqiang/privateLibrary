@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords " content="余杭水务信息管理门户"/>
+    <title>余杭水务信息管理门户</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/xxk.js"></script>
+<script>
+	$(function(){
+		$(".side ul li").hover(function(){
+			$(this).find(".sidebox").stop().animate({"width":"124px"},200).css({"opacity":"1","filter":"Alpha(opacity=100)","background":"539AC6"})	
+		},function(){
+			$(this).find(".sidebox").stop().animate({"width":"54px"},200).css({"opacity":"0.8","filter":"Alpha(opacity=80)","background":"539AC6"})	
+		});
+	});
+	//回到顶部函数
+	function goTop(){
+		$('html,body').animate({'scrollTop':0},300);
+	}
+
+	jQuery(document).ready(function($) {
+		$('.theme-login').click(function(){
+			$('.theme-popover-mask').fadeIn(100);
+			$('.theme-popover').slideDown(200);
+		})
+		$('.theme-poptit .close').click(function(){
+			$('.theme-popover-mask').fadeOut(100);
+			$('.theme-popover').slideUp(200);
+		})
+
+	})
+</script>
+
+<body>
+
+	<div class="side">
+	  <ul>
+		<li><a href="javascript:goTop();"><div class="sidebox"><img src="images/side_icon05.png">回到顶部</div></a></li>
+	  </ul>
+	</div>
+
+    <div class="index_kj">
+       <div class="index_head">
+	      <div class="hello">你好，张三</div>
+	      <div class="Collection"><a href="">设为首页</a>&nbsp;|&nbsp;<a href="">加入收藏</a>&nbsp;|&nbsp;<a href="">RSS订阅</a></div>
+	   </div>
+       <div class="index_banner"><img src="images/banner.jpg"></div>
+       <div class="index_menu">
+	     <ul>
+	       <li><a href="">网站首页</a></li>
+		   <li><a href="">内部办公</a></li>
+		   <li><a href="">内部共享</a></li>
+		   <li><a href="">通知公告</a></li>
+		   <li><a href="">政策文件</a></li>
+		   <li><a href="">部门信息</a></li>
+		   <li><a href="">规章制度</a></li>
+		   <ol><a href="">学习培训</a></ol>
+	     </ul>
+	   </div>
+
+       <div class="index_lowmenu">
+          <div class="data">2016年2月29日 星期一</div>
+          <div class="weather">
+			
+			<iframe allowtransparency="true" name="weather_inc" src="http://i.tianqi.com/index.php?c=code&id=11" width="500" height="15" frameborder="0" 
+			marginwidth="0" marginheight="8" scrolling="no">
+			</iframe>
+		  </div>
+		  <div class="search">
+		    <input type="text" name="">
+		    <input type="submit" value="搜索">
+		  </div>
+	   </div>
+
+
+       <div class="index_nk">
+	      <div class="index_nnk2">
+		       <div class="titlename1">
+			      <h1>待办事项</h1>
+				  <span><a href="">更多>></a></span>
+			   </div>
+		    
+
+				<ul>
+				  <li class="icon01"><h1><a href="">您有一条工单信息还没有处理，来自【工单系统】</a></h1><span>2016-03-03</span><input filed="dd" type="submit" value="处理"></li>
+				  <li class="icon02"><h1><a href="">您有一个请假单还没有审批，来自【办公OA】</a></h1><span>2016-03-03</span><input filed="dd" type="submit" value="处理"></li>
+				  <li class="icon03"><h1><a href="">您有一个出差单还没有审批，来自【办公OA】</a></h1><span>2016-03-03</span><input filed="dd" type="submit" value="处理"></li>
+				  <li class="icon04"><h1><a href="">您有一个出差单完成审核，来自【物资系统】</a></h1><span>2016-03-03</span><input filed="dd" type="submit" value="处理"></li>
+				  <li class="icon05"><h1><a href="">您有一条报警信息还没有查看,来自【管网系统】</a></h1><span>2016-03-03</span><input filed="dd" type="submit" value="处理"></li>
+				  <li class="icon06"><h1><a href="">您有一条合同审批信息还没有处理，来自【设备系统】</a></h1><span>2016-03-03</span><input filed="dd" type="submit" value="处理"></li>
+				  <li class="icon07"><h1><a href="">您有一个项目启动会通知还没有查看，来自【管网系统】</a></h1><span>2016-03-03</span><input filed="dd" type="submit" value="处理"></li>
+				</ul>
+		  
+		  </div>
+	   
+	   
+		  
+	      <div class="index_nnk" style="margin:0 0 0 4px;width:286px;">
+		       <div class="titlename2">
+			      <h1>通知公告</h1>
+				  <span><a href="">更多>></a></span>
+			   </div>	
+			   
+			<ul>
+		      <ol><a href="">本月起微信可以缴纳水费啦</a></ol>                  
+		      <ol><a href="">扬雷锋精神 展文明风采——余杭水务积极...</a></ol>      
+		      <ol><a href="">公司三届三次职工代表大会暨2016年水...</a></ol>        
+		      <ol><a href="">公司开展春节走访慰问</a></ol>      
+		      <ol><a href="">余杭水务寒潮及雨雪冰冻天气前线工作动态</a></ol>      
+		      <ol><a href="">余杭水务公司防冻保暖提醒</a></ol>      
+		      <ol><a href="">余杭税务公司重要通知</a></ol>      
+		    </ul>
+
+		  </div>	
+		  
+
+
+
+	   </div>
+
+
+
+
+      <div class="index_nk">
+           <div class="index_xxk">
+			  <div class="title cf">
+				<ul class="title-list fl cf ">
+				  <li class="c0 on">工作动态</li>
+				  <li class="c1">考核评定</li>
+				  <li class="c2">学习培训</li>
+				  <li class="c3">招标信息</li>
+				  <li class="c4">政策文件</li>
+				</ul>
+			  </div>
+			  <div class="product-wrap">
+				<!--工作动态-->
+				<div class="product show">
+					  <div class="index_xxknk">
+						<ul>
+						  <li><h1><a href="">本月起微信可以缴纳水费啦</a></h1><span>2016-03-03</span></li>                  
+						  <li><h1><a href="">扬雷锋精神 展文明风采——余杭水务积极...</a></h1><span>2016-03-03</span></li>      
+						  <li><h1><a href="">公司三届三次职工代表大会暨2016年水...</a></h1><span>2016-03-03</span></li>        
+						  <li><h1><a href="">公司开展春节走访慰问</a></h1><span>2016-03-03</span></li>      
+						  <li><h1><a href="">余杭水务寒潮及雨雪冰冻天气前线工作动态</a></h1><span>2016-03-03</span></li>      
+						  <li><h1><a href="">余杭水务公司防冻保暖提醒</a></h1><span>2016-03-03</span></li>      
+						  <li><h1><a href="">余杭税务公司重要通知</a></h1><span>2016-03-03</span></li>       
+						</ul>
+				     </div>
+				</div>
+				<!--考核评定-->
+				<div class="product">
+
+				</div>
+				<!--学习培训-->
+				<div class="product">
+
+				</div>
+				<!--招标信息-->
+				<div class="product">
+
+				</div>
+				<!--政策文件-->
+				<div class="product">
+
+				</div>
+			  </div>
+		    
+		   </div>
+	   
+		  
+	      <div class="index_nnk" style="margin:0 0 0 4px;width:286px;">
+		       <div class="titlename2">
+			      <h1>停水信息</h1>
+				  <span><a href="">更多>></a></span>
+			   </div>	
+			   
+			<ul>
+		      <ol><a href="">本月起微信可以缴纳水费啦</a></ol>                  
+		      <ol><a href="">扬雷锋精神 展文明风采——余杭水务积极...</a></ol>      
+		      <ol><a href="">公司三届三次职工代表大会暨2016年水...</a></ol>        
+		      <ol><a href="">公司开展春节走访慰问</a></ol>      
+		      <ol><a href="">余杭水务寒潮及雨雪冰冻天气前线工作动态</a></ol>      
+		      <ol><a href="">余杭水务公司防冻保暖提醒</a></ol>      
+		      <ol><a href="">余杭税务公司重要通知</a></ol>      
+		    </ul>
+
+		  </div>	
+		  
+
+
+
+	   </div>
+
+
+
+      <div class="index_nk">
+           <div class="index_xxk">
+			  <div class="title cf">
+				<ul class="title-list fl cf ">
+				  <li class="c0 on">企业文化</li>
+				  <li class="c1">党建园地</li>
+				  <li class="c2">健康教育</li>
+				  <li class="c3">活动专栏</li>
+				</ul>
+			  </div>
+			  <div class="product-wrap">
+				<!--工作动态-->
+				<div class="product show">
+					  <div class="index_xxknk">
+						<ul>
+						  <li><h1><a href="">本月起微信可以缴纳水费啦</a></h1><span>2016-03-03</span></li>                  
+						  <li><h1><a href="">扬雷锋精神 展文明风采——余杭水务积极...</a></h1><span>2016-03-03</span></li>      
+						  <li><h1><a href="">公司三届三次职工代表大会暨2016年水...</a></h1><span>2016-03-03</span></li>        
+						  <li><h1><a href="">公司开展春节走访慰问</a></h1><span>2016-03-03</span></li>      
+						  <li><h1><a href="">余杭水务寒潮及雨雪冰冻天气前线工作动态</a></h1><span>2016-03-03</span></li>      
+						  <li><h1><a href="">余杭水务公司防冻保暖提醒</a></h1><span>2016-03-03</span></li>      
+						  <li><h1><a href="">余杭税务公司重要通知</a></h1><span>2016-03-03</span></li>       
+						</ul>
+				     </div>
+				</div>
+				<!--考核评定-->
+				<div class="product">
+
+				</div>
+				<!--学习培训-->
+				<div class="product">
+
+				</div>
+				<!--招标信息-->
+				<div class="product">
+
+				</div>
+
+			  </div>
+		    
+		   </div>
+	   
+		  
+	      <div class="index_nnk" style="margin:0 0 0 4px;width:286px;">
+		       <div class="titlename2">
+			      <h1>服务公告</h1>
+				  <span><a href="">更多>></a></span>
+			   </div>
+			   <input type="submit" value=" " style="background:url(images/publicphone.jpg)">
+               <input type="submit" value=" " style="background:url(images/exchangeplatform.jpg)">
+               <input type="submit" value=" " style="background:url(images/suggestions.jpg)">
+		  </div>	
+		  
+
+
+
+	   </div>
+
+
+       <div class="index_banner2"><img src="images/banner4.jpg"></div>
+
+       <div class="index_nk">
+	      <div class="index_nnk3">
+		       <div class="titlename1">
+			      <h1>本月重要指标</h1>
+				  <span><a target="_blank" href="http://10.10.1.94:8080/">更多>></a></span>
+			   </div>
+		     <img src="images/bi.jpg">
+		  
+		  </div>
+
+	   </div>
+
+      <div class="index_nk">
+         <div class="index_xxk" style="width:1003px;">
+			  <div class="title1 cf">
+				<ul class="title-list1 fl cf ">
+				  <li class="c0 on">生产运行</li>
+				  <li class="c1">经营服务</li>
+				  <li class="c2">综合管理</li>
+				  <li class="c3">工程管理</li>
+				  <li class="c4">支撑平台</li>
+				</ul>
+			  </div>
+			  <div class="product-wrap1">
+				<!--供水调度-->
+				<div class="product1 show">
+					  <div class="index_xxknk2">
+					    <ul>
+                         <li><a href=""><img src="images/systemicon.jpg">供水调度</a></li>
+						 <li><a href=""><img src="images/systemicon2.jpg">排水调度</a></li>
+						 <li><a href=""><img src="images/systemicon3.jpg">设备管理</a></li>
+						 <li><a href=""><img src="images/systemicon4.jpg">原水监测</a></li>
+						 <li><a href=""><img src="images/systemicon5.jpg">管网点采集</a></li>
+                        </ul>
+				     </div>
+				</div>
+				<!--排水调度-->
+				<div class="product1">
+
+				</div>
+				<!--设备管理-->
+				<div class="product1">
+
+				</div>
+				<!--原水监测-->
+				<div class="product1">
+
+				</div>
+				<!--管网点采集-->
+				<div class="product1">
+
+				</div>
+			  </div>
+		    
+		   </div>	  
+
+	   </div>
+
+
+
+	   <div class="index_bom">
+           版权所有：杭州余杭水务有限公司  地址：杭州市余杭区临平藕花洲大街231号  邮编：311100<br>客服热线：96390 浙IC备10040665
+	   </div>
+
+       
+
+
+
+
+
+    </div>
+
+
+
+</body>
+</html>

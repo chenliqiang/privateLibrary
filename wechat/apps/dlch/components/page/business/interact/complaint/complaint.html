@@ -1,0 +1,39 @@
+<div class="interact-complaint">
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-icon mui-icon-left-nav mui-pull-left" href="#business/interact"></a>
+        <h1 class="mui-title">咨询建议投诉</h1>
+    </header>
+    <div class="mui-content-padded" style="margin: 10px 5px;padding: 44px 10px 10px 10px;overflow-y:scroll;" v-style="height:con_height">
+        <form class="mui-input-group" id="form-complaint">
+            <div class="mui-input-row">
+                <label>类型</label>
+                <select type="text" v-model="form.typo">
+                    <option value="投诉">投诉</option>
+                    <option value="咨询">咨询</option>
+                </select>
+                <span class="jui-select mui-icon mui-icon-arrowdown"></span>
+            </div>
+            <div class="mui-input-row">
+                <label>主题</label>
+                <input type="text" v-model="form.theme" class="mui-input-clear" placeholder="请输入主题" required>
+            </div>
+            <div class="mui-input-row" style="height:auto">
+                <label>内容</label>
+                <textarea rows="5" v-model="form.content" placeholder="请输入详细内容" required></textarea>
+            </div>
+            <div class="mui-input-row">
+                <label>姓名</label>
+                <input type="text" v-model="form.name" class="mui-input-clear" placeholder="请输入姓名" required>
+            </div>
+            <div class="mui-input-row">
+                <label>地址</label>
+                <input type="text" v-model="form.addr" class="mui-input-clear" placeholder="请输入地址" required>
+            </div>
+            <div class="mui-input-row">
+                <label>电话</label>
+                <input type="text" validator="number" style="padding: 10px 15px 10px 0;" v-model="form.tel" class="mui-input-clear" placeholder="请输入电话" required>
+            </div>
+        </form>
+        <button type="submit" form="form-complaint" class="mui-btn mui-btn-block jui-btn-binding mui-btn-primary">提交</button>
+    </div>
+</div>

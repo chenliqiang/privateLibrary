@@ -1,0 +1,31 @@
+<div class="page-handle-peccancy">
+
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-icon mui-icon-left-nav mui-pull-left" href="#business/handle"></a>
+        <h1 class="mui-title">违章用水举报</h1>
+
+    </header>
+    <div class="mui-content-padded mui-content">
+        <form class="mui-input-group" id="form-peccancy">
+            <div class="mui-input-row">
+                <label>违章地址</label>
+                <input type="text" v-model="form.addr" class="mui-input-clear" required="required" placeholder="请输违章地址">
+
+            </div>
+            <div class="mui-input-row">
+                <label>联&nbsp;&nbsp;系&nbsp;&nbsp;人</label>
+                <input type="text" v-model="form.contact" class="mui-input-clear" required="required" placeholder="请输入联系人">
+            </div>
+            <div class="mui-input-row">
+                <label>联系电话</label>
+                <input type="text" v-model="form.tel" validator="mobile" class="mui-input-clear" required="required" placeholder="请输入联系电话">
+            </div>
+            <div class="mui-input-row" style="height: auto;">
+                <label>违章情况</label>
+                <textarea v-model="form.desc" rows="5" required="required" placeholder="请输入违章情况"></textarea>
+            </div>
+        </form>
+
+        <button type="submit" form="form-peccancy" id="confirm" class="mui-btn mui-btn-primary" style="margin-top:20px;width: 100%;">提交</button>
+    </div>
+</div>

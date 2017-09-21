@@ -1,0 +1,37 @@
+<div class="query-water">
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-icon mui-icon-left-nav mui-pull-left" href="#business/query"></a>
+        <a class=" mui-pull-right mui-icon mui-icon-home-filled" href="#business"></a>
+        <h1 class="mui-title">非居民用户水量查询</h1>
+    </header>
+    <div class="mui-content-padded" style="margin-top: 60px;">
+        <form id="form-water" class="mui-input-group">
+            <div class="mui-input-row">
+                <label>站点编号</label>
+                <input v-model="form.sn" type="text" class="mui-input-clear" placeholder="请输入站点编号" required>
+            </div>
+            <div class="mui-input-row">
+                <label>查询密码</label>
+                <input v-model="form.pwd" type="password" class="mui-input-clear" placeholder="请输入查询密码" required>
+            </div>
+        </form>
+        <button type="submit" form="form-water" id="btn-query" class="mui-btn mui-btn-block jui-btn-binding mui-btn-primary">查询</button>
+    </div>
+    <div v-if="history.length>0">
+        <h5 class="mui-content-padded">查询记录</h5>
+        <div class="mui-card">
+            <ul class="mui-table-view">
+                <li v-repeat="v in history" class="mui-table-view-cell">
+                    <div v-on="tap:bindQuery(v.sn,v.pwd)" style="float: left;width: 85%;">{{v.sn}}</div>
+                    <div style="float: right">
+                        <span v-on="tap:bindDelete(v.sn)" class="mui-pull-right mui-icon mui-icon-close"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="mui-content-padded">
+        <h5>温馨提示</h5>
+        <p style="text-indent:2em;">站点编号及查询密码请至我公司营业厅申请获取，如有疑问可致电24小时水务热线0575-85117474咨询。</p>
+    </div>
+</div>

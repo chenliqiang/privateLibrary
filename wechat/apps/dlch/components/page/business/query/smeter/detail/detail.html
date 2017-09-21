@@ -1,0 +1,41 @@
+<div class="query-smeter-detail">
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">居民用户水量查询</h1>
+    </header>
+    <div class="mui-content">
+        <div v-if="list.length==0">
+            <p style="text-align: center; padding: 10px;">{{msg}}</p>
+        </div>
+        <div v-show="list.length>0">
+            <ul class="mui-table-view mui-content">
+                <li class="mui-table-view-cell">
+                    户号：{{list[0].sn}}
+                </li>
+                <li class="mui-table-view-cell">
+                    地址：{{list[0].addr}}
+                </li>
+            </ul>
+            <div class="jui-state-table" style="padding: 0 10px;">
+                <table class="jui-table">
+                    <thead>
+                    <th style="width:40%;font-size: 14px;">日期</th>
+                    <th style="width:30%;font-size: 14px;">止度</th>
+                    <th style="width:30%;font-size: 14px;">水量（吨）</th>
+                    </thead>
+                </table>
+            </div>
+            <div class="jui-state-table" style="overflow-y:scroll;padding:0 10px;" v-style="height:table_height">
+                <table class="jui-table">
+                    <tbody>
+                    <tr v-repeat="l in list">
+                        <td style="width:40%;">{{l.date}}</td>
+                        <td style="width:30%;">{{l.end}}</td>
+                        <td style="width:30%;">{{l.mount}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

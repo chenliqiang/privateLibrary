@@ -1,0 +1,56 @@
+<div class="page-home mui-scroll-wrapper">
+    <div class="mui-scroll">
+        <div id="slider"  class="mui-slider">
+            <div class="mui-slider-group mui-slider-loop">
+                <div class="mui-slider-item mui-slider-item-duplicate" v-if="config.carousel">
+                    <a href="#">
+                        <img  v-attr="src:config.carousel[0].src" style="height: 104px;">
+                    </a>
+                </div>
+                <div class="mui-slider-item" v-repeat="c in config.carousel">
+                    <a href="#">
+                        <img v-attr="src:c.src" style="height: 104px;">
+                    </a>
+                </div>
+                <div class="mui-slider-item mui-slider-item-duplicate"  v-if="config.carousel">
+                    <a href="#">
+                        <img  v-attr="src:config.carousel[0].src"  style="height: 104px;">
+                    </a>
+                </div>
+            </div>
+            <div class="mui-slider-indicator">
+                <div class="mui-indicator " v-class="mui-active" v-repeat="config.carousel"></div>
+            </div>
+        </div>
+
+        <div class="jui-icons-nav">
+            <a href="#business"><b class="icons-wzz"></b>供水业务</a>
+            <a href="#info"><b class="icons-wzx"></b>供水信息</a>
+            <a href="#custom"><b class="icons-wsh"></b>水业资讯</a>
+            <a href="#service"><b class="icons-wkf"></b>客服热线</a>
+        </div>
+
+        <div id="news-tab" style="margin-bottom: 56px;"  class="mui-slider">
+            <div id="sliderSegmentedControl"  class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+                <a class="mui-control-item" href="#item1mobile">
+                    最新资讯
+                </a>
+            </div>
+            <div class="mui-slider-group">
+                <div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+                    <ul class="mui-table-view" id="news-list">
+                        <li class="mui-table-view-cell" v-repeat="v in config.content">
+                            <a v-on="tap:toDetail(v)">{{v.tl}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<nav class="mui-bar mui-bar-tab">
+    <div class="jui-tel-btn" >
+        <a id="tel">24小时水务热线：{{config.tel}}</a>
+    </div>
+</nav>

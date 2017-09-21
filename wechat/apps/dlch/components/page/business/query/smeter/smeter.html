@@ -1,0 +1,31 @@
+<div class="query-smeter">
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-icon mui-icon-left-nav mui-pull-left" href="#business/query"></a>
+        <a class=" mui-pull-right mui-icon mui-icon-home-filled" href="#business"></a>
+        <h1 class="mui-title">居民用户水量查询</h1>
+    </header>
+    <div class="mui-content">
+        <h5 style="padding: 5px 15px;">查询类型</h5>
+        <form class="mui-input-group" id="search-type">
+            <div class="mui-input-row mui-radio">
+                <label>月水量查询</label>
+                <input name="radio1" type="radio" data-type="watermonth" checked>
+            </div>
+            <div class="mui-input-row mui-radio">
+                <label>日水量查询</label>
+                <input name="radio1" type="radio" data-type="waterdetail">
+            </div>
+        </form>
+        <h5 style="padding: 5px 15px;">已绑定的户号</h5>
+        <form class="mui-input-group" id="sn-list" style="max-height: 200px;overflow: auto;">
+            <div v-if="list.length==0" class="mui-input-row">
+                <h5 style="text-align: center;padding: 8px 0px;">暂未绑定户号，请先绑定。</h5>
+            </div>
+            <div v-show="list.length>0" v-repeat="l in list" class="mui-input-row mui-radio">
+                <label>户号：{{l.sn}}</label>
+                <input name="radio1" type="radio" data-sn="{{l.sn}}" v-attr="checked:$index | getChecked">
+            </div>
+        </form>
+        <a v-on="tap:search" style="position: fixed;bottom: 0;margin: 0;" class="mui-btn mui-btn-block mui-icon mui-icon-search">查询</a>
+    </div>
+</div>

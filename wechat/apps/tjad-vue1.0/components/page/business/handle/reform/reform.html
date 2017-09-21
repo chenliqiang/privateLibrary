@@ -1,0 +1,48 @@
+<div class="page-handle-reform">
+
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-icon mui-icon-left-nav mui-pull-left" href="#business/handle"></a>
+        <h1 class="mui-title">一户一表改造</h1>
+
+    </header>
+    <div class="mui-content-padded mui-content" >
+        <form class="mui-input-group" id="form-reform">
+            <div class="mui-input-row">
+                <label>总表户号</label>
+                <input type="text" v-model="form.sn"  validator="number" class="mui-input-clear" placeholder="请输入总表户号" required>
+            </div>
+            <div class="mui-input-row">
+                <label>总表地址</label>
+                <input type="text" v-model="form.addr"  class="mui-input-clear" placeholder="请输入总表地址" required>
+            </div>
+            <div class="mui-input-row">
+                <label>用户名</label>
+                <input type="text" v-model="form.name" class="mui-input-clear" placeholder="请输入户名" required>
+            </div>
+            <div class="mui-input-row">
+                <label>安装地址</label>
+                <input type="text" v-model="form.install" class="mui-input-clear" placeholder="请输入安装地址" required>
+            </div>
+            <div class="mui-input-row">
+                <label>固定电话</label>
+                <input type="text" v-model="form.tel"  class="mui-input-clear" placeholder="请输入固定电话" required>
+            </div>
+            <div class="mui-input-row">
+                <label>移动电话</label>
+                <input type="text"  v-model="form.mobile"  validator="mobile" class="mui-input-clear" placeholder="请输入移动电话" required>
+            </div>
+
+            <div class="mui-content-padded" style="text-indent: 1em">
+                <p>尊敬的用户，在工作人员上门为您服务时，<span style="color: red;">您需提供以下资料：</span>
+                </p>
+
+                <p>（1）申请人居民身份证；</p>
+                <p>（2）申请人房屋产权所有证复印件；</p>
+                <p>（3）经办人居民身份证；</p>
+                <p>（4）集体户总表最新缴费凭证；</p>
+
+            </div>
+        </form>
+        <button form="form-reform" type="submit" class="mui-btn mui-btn-primary" style="width: 100%">提交</button>
+    </div>
+</div>

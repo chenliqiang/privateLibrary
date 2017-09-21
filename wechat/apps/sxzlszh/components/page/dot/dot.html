@@ -1,0 +1,32 @@
+<div class="page-dot mui-custom " >
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">营业网点</h1>
+    </header>
+    <div class="mui-scroll-wrapper"  style="margin-top: 44px;">
+        <div class="mui-scroll">
+            <div v-repeat="l in list">
+                <div class="cui-title">
+                    <span class="name">{{l.suid | shortName}}</span>
+                </div>
+                <ul class="mui-table-view">
+                    <li class="mui-table-view-cell" v-if="l.result.length==0">
+                        暂无数据
+                    </li>
+                    <li class="mui-table-view-cell" v-show="l.result.length>0" v-repeat="n in l.result">
+                        <a class="mui-navigate-right "  v-on="tap:toMap(n._id,l.suid)">
+                            {{n.name}}
+                            <p>{{n.addr}}</p>
+                        </a>
+                    </li>
+                    <li class="mui-table-view-cell mui-media" v-show="l.result.length==2">
+                        <a href="#dot/all/{{l.suid}}" class="mui-navigate-right">
+                            更多
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+

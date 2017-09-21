@@ -1,0 +1,27 @@
+<div class="page-bind">
+
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-icon mui-icon-refresh mui-pull-right" v-on="click:reload"></a>
+        <h1 class="mui-title">已绑列表</h1>
+    </header>
+    <ul class="mui-table-view" style="margin-top:45px;">
+        <li class="mui-table-view-divider">已绑定的户号
+
+        </li>
+    </ul>
+    <ul class="mui-table-view" id="snlist">
+        <li class="mui-table-view-cell" v-if="list.length==0">暂未绑定户号，请先绑定。</li>
+        <li class="mui-table-view-cell" v-repeat="l in list">
+            户号：{{l.sn}}
+            <a class="mui-btn mui-btn-outlined mui-icon btn-unbind" v-on="click:unbind(l.sn)">解绑</a>
+        </li>
+    </ul>
+
+
+    <div class="mui-content-padded" style="padding-top:5px;">
+        <a type="button" href="#business/bind/add" class="mui-btn mui-btn-block mui-btn-primary" style="padding: 8px;font-size: 14px;font-weight: 400;">新增绑定</a>
+
+        <h4>温馨提示</h4>
+        <p>1. 任何团队或个人未经被绑定户号户主许可，不得绑定他人户号，未经被绑定户号主许可绑定造成的损失和法律责任由绑定者全部承担。</p>
+    </div>
+</div>

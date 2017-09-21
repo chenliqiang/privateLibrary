@@ -1,0 +1,30 @@
+<div class="query-water-detail">
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">{{title}}</h1>
+    </header>
+    <div class="mui-content">
+        <div class="jui-state-table" style="padding: 0 10px;">
+            <table class="jui-table" style="margin-top: 10px;">
+                <thead>
+                <th style="width:30%;font-size: 14px;">日期</th>
+                <th style="width:15%;font-size: 14px;">小时</th>
+                <th style="width:27%;font-size: 14px;">累计值(T)</th>
+                <th style="width:33%;font-size: 14px;">时流量(T/h)</th>
+                </thead>
+            </table>
+        </div>
+        <div class="jui-state-table" style="overflow-y:scroll;padding:0 10px;" v-style="height:table_height">
+            <table class="jui-table">
+                <tbody>
+                <tr v-repeat="l in list">
+                    <td style="width:30%;">{{l.date}}</td>
+                    <td style="width:15%;">{{l.hour}}</td>
+                    <td style="width:27%;">{{l.mount}}</td>
+                    <td style="width:33%;">{{l.flow}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="page-bind-add">
+    <header class="mui-bar mui-bar-nav">
+        <h1 class="mui-title">{{form.name}}</h1>
+    </header>
+    <div class="mui-loading" style="margin-top:20px;" v-if="form.length>0">
+        <div class="mui-spinner">
+            <div class="mui-spinner-indicator mui-spinner-indicator12"></div>
+            <div class="mui-spinner-indicator mui-spinner-indicator11"></div>
+            <div class="mui-spinner-indicator mui-spinner-indicator10"></div>
+            <div class="mui-spinner-indicator mui-spinner-indicator9"></div>
+            <div class="mui-spinner-indicator mui-spinner-indicator8"></div>
+            <div class="mui-spinner-indicator mui-spinner-indicator7"></div>
+            <div class="mui-spinner-indicator mui-spinner-indicator6"></div>
+            <div class="mui-spinner-indicator mui-spinner-indicator5"></div>
+            <div class="mui-spinner-indicator mui-spinner-indicator4"></div>
+            <div class="mui-spinner-indicator mui-spinner-indicator3"></div>
+            <div class="mui-spinner-indicator mui-spinner-indicator2"></div>
+            <div class="mui-spinner-indicator mui-spinner-indicator1"></div>
+        </div>
+    </div>
+    <div class="mui-content-padded " style="margin-top: 60px;" v-show="form.fields.length>0">
+        <form class="mui-input-group form-submit" id="formSubmit">
+
+            <div class="mui-input-row" v-for="f in form.fields">
+                <label>{{f.val}}</label>
+                <input v-bind:type="f.key | fType" class="mui-input-clear" name="{{f.key}}" placeholder="请输入{{f.val}}" number required>
+            </div>
+        </form>
+        <h5 style="text-align: center;color:red" v-show="valid">
+            请填写正确！
+        </h5>
+        <input form="formSubmit" class="mui-btn mui-btn-block btn-binding mui-btn-primary" type="submit" value="绑定"/>
+    </div>
+</div>

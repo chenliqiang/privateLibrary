@@ -1,0 +1,48 @@
+<div class="page-interact">
+    <header class="mui-bar mui-bar-nav">
+        <a class=" mui-icon mui-icon-left-nav mui-pull-left" href="#business"></a>
+        <h1 class="mui-title">在线互动</h1>
+    </header>
+    <div class="mui-content">
+        <div class="cui-title">
+            <span class="name">市区供水</span>
+        </div>
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell nav-bar">
+                <a v-on="tap:getRouter('maintain','sxzls')" class="mui-navigate-right ">
+                    <div class="mui-pull-left jui-icons jui-icons-change"></div>
+                    用户电话信息变更与维护
+                </a>
+            </li>
+            <li class="mui-table-view-cell nav-bar">
+                <a v-on="tap:getRouter('check','sxzls')" class="mui-navigate-right ">
+                    <div class="mui-pull-left jui-icons jui-icons-satisfy"></div>
+                    用水满意度调查
+                </a>
+            </li>
+            <li class="mui-table-view-cell nav-bar">
+                <a v-on="tap:getRouter('complaint','sxzls')" class="mui-navigate-right ">
+                    <div class="mui-pull-left jui-icons jui-icons-complain"></div>
+                    咨询建议投诉
+                </a>
+            </li>
+        </ul>
+        <div class="cui-title">
+            <span class="name">市区排水</span>
+        </div>
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell nav-bar">
+                <a v-on="tap:getRouter('check','sxps')" class="mui-navigate-right ">
+                    <div class="mui-pull-left jui-icons jui-icons-satisfy"></div>
+                    用水满意度调查
+                </a>
+            </li>
+            <li class="mui-table-view-cell nav-bar">
+                <a v-on="tap:getRouter('maintain','sxps')" class="mui-navigate-right ">
+                    <div class="mui-pull-left jui-icons jui-icons-change"></div>
+                    用户电话信息变更与维护
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

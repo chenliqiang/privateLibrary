@@ -1,0 +1,14 @@
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+}
+
+html,body,#app{
+    height: 100%;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.btn-binding {
+    padding: 5px 0;
+    margin-top: 15px;
+}

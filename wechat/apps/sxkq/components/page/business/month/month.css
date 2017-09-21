@@ -1,0 +1,10 @@
+.page-month .jui-table {
+  width: 100%;
+  text-align: center;
+}
+.page-month .jui-table th {
+  border-bottom-color: #ddd;
+  background-color: #f1f1f1;
+  color: #353535;
+  line-height: 28px;
+}

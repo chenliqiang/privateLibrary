@@ -1,0 +1,28 @@
+<div class="page-handle-repair">
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-icon mui-icon-left-nav mui-pull-left" href="#business/handle"></a>
+        <h1 class="mui-title">报修申请</h1>
+    </header>
+    <div class="mui-content mui-content-padded">
+        <form class="mui-input-group" id="form-repair">
+            <div class="mui-input-row">
+                <label>报修地址</label>
+                <input type="text" v-model="form.addr" class="mui-input-clear" required placeholder="请输入报修地址">
+            </div>
+            <div class="mui-input-row">
+                <label>联&nbsp;&nbsp;系&nbsp;&nbsp;人</label>
+                <input type="text"  v-model="form.contact" class="mui-input-clear" required placeholder="请输入联系人">
+            </div>
+            <div class="mui-input-row">
+                <label>联系电话</label>
+                <input type="text" validator="mobile"  v-model="form.tel" class="mui-input-clear" required="required" placeholder="请输入联系电话">
+            </div>
+            <div class="mui-input-row" style="height: auto;">
+                <label>报修内容</label>
+                <textarea  v-model="form.desc" rows="5" required="required" placeholder="请输入报修内容"></textarea>
+            </div>
+        </form>
+        <div style="padding:0 15px;">
+            <button type="submit" form="form-repair" id="confirm" class="mui-btn mui-btn-primary" style="width: 100%;margin-top:20px;">提交</button>
+        </div>
+    </div>

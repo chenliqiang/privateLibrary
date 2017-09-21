@@ -1,0 +1,31 @@
+<div class="page-custom mui-custom mui-scroll-wrapper" >
+    <div class="mui-scroll"  style="padding-bottom: 50px;">
+
+        <div class="mui-loading" style="margin-top:20px;" v-if="list.length==0">
+            <div class="mui-spinner">
+                <div class="mui-spinner-indicator mui-spinner-indicator12"></div>
+                <div class="mui-spinner-indicator mui-spinner-indicator11"></div>
+                <div class="mui-spinner-indicator mui-spinner-indicator10"></div>
+                <div class="mui-spinner-indicator mui-spinner-indicator9"></div>
+                <div class="mui-spinner-indicator mui-spinner-indicator8"></div>
+                <div class="mui-spinner-indicator mui-spinner-indicator7"></div>
+                <div class="mui-spinner-indicator mui-spinner-indicator6"></div>
+                <div class="mui-spinner-indicator mui-spinner-indicator5"></div>
+                <div class="mui-spinner-indicator mui-spinner-indicator4"></div>
+                <div class="mui-spinner-indicator mui-spinner-indicator3"></div>
+                <div class="mui-spinner-indicator mui-spinner-indicator2"></div>
+                <div class="mui-spinner-indicator mui-spinner-indicator1"></div>
+            </div>
+        </div>
+        <ul v-show="list.length>0" class="mui-table-view" v-repeat="l in list" v-style="margin-top:$index==0?'20px':'25px'">
+            <li class="mui-table-view-cell" v-repeat="t in l">
+                <a class="mui-navigate-right " href="#custom/list/{{t.type}}?name={{t.name}}">
+                    <img v-attr="src:t.icon" style="height: 20px;width: 20px;vertical-align: text-bottom;">
+                    {{t.name}}
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<c-nav target="{{currentView}}"></c-nav>

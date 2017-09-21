@@ -1,0 +1,78 @@
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+}
+
+html,body,#app{
+    height: 100%;
+    overflow: hidden;
+}
+
+.jui-bg {
+    background-color: #efeff4;
+}
+
+.jui-state-table {
+    padding: 10px;
+}
+
+.jui-state-table table {
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+}
+
+.jui-state-table th,
+td {
+    height: 35px;
+    line-height: 35px;
+}
+
+.jui-state-table th {
+    background-color: #b4e0ff;
+    font-weight: normal;
+}
+
+.jui-state-table-1 {
+    padding: 10px;
+}
+
+.jui-state-table-1 table {
+    width: 100%;
+    background-color: #fff;
+}
+
+.jui-state-table-1 th,
+td {
+    height: 35px;
+    line-height: 35px;
+    font-size: smaller;
+}
+
+.jui-state-table-1 td:nth-child(2n+1) {
+    text-align: center;
+}
+
+.jui-state-table-1 td:nth-child(2n) {
+    font-weight: bold;
+}
+
+.jui-state-table-1 th {
+    background-color: #b4e0ff;
+    font-weight: normal;
+}
+
+.jui-state-table-2 {
+    padding: 10px;
+}
+
+.jui-state-table-2 table {
+    width: 100%;
+    background-color: #fff;
+}
+
+.jui-state-table-2 th,
+td {
+    height: 35px;
+    line-height: 35px;
+    font-size: 13px;
+}

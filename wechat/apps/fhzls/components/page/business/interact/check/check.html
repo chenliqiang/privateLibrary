@@ -1,0 +1,58 @@
+<div class="interact-check">
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-icon mui-icon-left-nav mui-pull-left" href="#business/interact"></a>
+        <h1 class="mui-title">用水满意度调查</h1>
+    </header>
+    <div class="mui-content-padded"  style="margin: 10px 5px;padding: 44px 10px 10px 10px;overflow-y:scroll;" v-style="height:con_height">
+        <h5 style="margin-bottom: 10px;">一、请您对下列项目的满意度进行评价</h5>
+        <form class="mui-input-group" id="form-check">
+            <div class="mui-input-row ">
+                <label>总体评价</label>
+                <select type="text" v-model="form.judge1">
+                    <option value="满意">满意</option>
+                    <option value="较满意">较满意</option>
+                    <option value="不满意">不满意</option>
+                </select>
+                <span class="jui-select mui-icon mui-icon-arrowdown"></span>
+            </div>
+            <div class="mui-input-row">
+                <label>水质状况</label>
+                <select type="text" v-model="form.judge2">
+                    <option value="满意">满意</option>
+                    <option value="较满意">较满意</option>
+                    <option value="不满意">不满意</option>
+                </select>
+                <span class="jui-select mui-icon mui-icon-arrowdown"></span>
+            </div>
+            <div class="mui-input-row">
+                <label>供水压力</label>
+                <select type="text" v-model="form.judge3">
+                    <option value="满意">满意</option>
+                    <option value="较满意">较满意</option>
+                    <option value="不满意">不满意</option>
+                </select>
+                <span class="jui-select mui-icon mui-icon-arrowdown"></span>
+            </div>
+            <div class="mui-input-row">
+                <label>用户服务</label>
+                <select type="text" v-model="form.judge4">
+                    <option value="满意">满意</option>
+                    <option value="较满意">较满意</option>
+                    <option value="不满意">不满意</option>
+                </select>
+                <span class="jui-select mui-icon mui-icon-arrowdown"></span>
+            </div>
+            <div class="mui-input-row">
+                <label>电话</label>
+                <input type="text" validator="number" style="padding: 10px 15px 10px 0;" v-model="form.tel" class="mui-input-clear" placeholder="请输入电话" required>
+            </div>
+        </form>
+        <h5 style="margin:30px 0 0 0">
+            二、您认为还有哪些需要改进的地方
+        </h5>
+        <div class="mui-input-row" style="margin: 10px 5px;">
+            <textarea id="check_remark" v-class="thisRemark | isRemark" data-event="remark" rows="5" v-model="form.remark" placeholder="请输入详细内容"></textarea>
+        </div>
+        <button type="submit" form="form-check" class="mui-btn mui-btn-block jui-btn-binding mui-btn-primary">提交</button>
+    </div>
+</div>

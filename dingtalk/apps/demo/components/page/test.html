@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no"/>
+</head>
+<body>
+<div>
+    <button id="taobao">启动淘宝</button>
+    <button id="weibo">启动微博</button>
+</div>
+<script src="http://g.alicdn.com/ilw/ding/0.8.4/scripts/dingtalk.js"></script>
+<script src="/static/duliang/Scripts/jquery-1.11.1.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+$(function(){
+
+    var prefix = "http://weixin2.test.dlmeasure.com";
+    var url = location.href.split('#')[0];
+    var corpid = "ding4b41eb92ff23e86e";
+
+    $.ajax({
+        url:"http://weixin2.test.dlmeasure.com/duliang/1.1/dingtalk/jsapi/getconfig",
+        data:JSON.stringify({corpid:corpid,url:url}),
+        type:'POST',
+        dateType:'json',
+        contentType:'application/json',
+        success:function(rep){
+
+            dd.config({
+                agentId: "17670701",//微应用-丁丁
+                corpId: "ding4b41eb92ff23e86e",
+                timeStamp: rep.Response.timestamp,
+                nonceStr: rep.Response.nonceStr,
+                signature: rep.Response.signature,
+                jsApiList: [
+                    "device.notification.alert",
+                    "device.launcher.launchApp"
+                ]
+            });
+
+            dd.error(function(error){
+                alert(JSON.stringify(error));
+            });
+
+            $("#taobao").click(function(){
+                dd.ready(function(){
+
+                    var app = "";
+                    if(dd.ios){
+                        app = "taobao";
+                    }
+                    else if(dd.android){
+                        app = "com.taobao.taobao";
+                    }
+
+                    dd.device.launcher.launchApp({
+                        app: app,
+                        activity :'',
+                        onSuccess : function(data) {
+                            if(data.result == "false" || data.result == false){
+                                dd.device.notification.alert({
+                                    message: "您可能尚未安装淘宝",
+                                    title: "提示",//可传空
+                                    buttonName: "确定",
+                                    onSuccess : function() {
+                                    },
+                                    onFail : function(err) {}
+                                });
+                            }
+                        },
+                        onFail : function(err) {
+                            alert("launchApp" + JSON.stringify(err));
+                        }
+                    });
+                })
+            })
+
+
+            $("#weibo").click(function(){
+                dd.ready(function(){
+                    var app = "";
+                    if(dd.ios){
+                        app = "weibo";
+                    }
+                    else if(dd.android){
+                        app = "com.sina.weibo";
+                    }
+                    dd.device.launcher.launchApp({
+                        app: app,
+                        activity :'',
+                        onSuccess : function(data) {
+                            if(data.result == "false" || data.result == false){
+                                dd.device.notification.alert({
+                                    message: "您可能尚未安装微信",
+                                    title: "提示",//可传空
+                                    buttonName: "确定",
+                                    onSuccess : function() {
+                                    },
+                                    onFail : function(err) {}
+                                });
+                            }
+                        },
+                        onFail : function(err) {
+                            alert("launchApp" + JSON.stringify(err));
+                        }
+                    });
+                })
+            })
+        },
+        error:function(e){
+            alert(e);
+        }
+    })
+})
+
+</script>
+</body>
+</html>

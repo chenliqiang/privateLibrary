@@ -1,0 +1,48 @@
+<div class="page-bind-add">
+
+
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-icon mui-icon-left-nav mui-pull-left" id="pullback" href="#business/bind"></a>
+
+        <h1 class="mui-title">户号绑定</h1>
+    </header>
+    <div class="mui-content-padded " style="margin-top: 60px;">
+        <form class="mui-input-group form-submit" id="formSubmit">
+            <div class="mui-loading" style="margin-top:20px;" v-show="form.length>0">
+                <div class="mui-spinner">
+                    <div class="mui-spinner-indicator mui-spinner-indicator12"></div>
+                    <div class="mui-spinner-indicator mui-spinner-indicator11"></div>
+                    <div class="mui-spinner-indicator mui-spinner-indicator10"></div>
+                    <div class="mui-spinner-indicator mui-spinner-indicator9"></div>
+                    <div class="mui-spinner-indicator mui-spinner-indicator8"></div>
+                    <div class="mui-spinner-indicator mui-spinner-indicator7"></div>
+                    <div class="mui-spinner-indicator mui-spinner-indicator6"></div>
+                    <div class="mui-spinner-indicator mui-spinner-indicator5"></div>
+                    <div class="mui-spinner-indicator mui-spinner-indicator4"></div>
+                    <div class="mui-spinner-indicator mui-spinner-indicator3"></div>
+                    <div class="mui-spinner-indicator mui-spinner-indicator2"></div>
+                    <div class="mui-spinner-indicator mui-spinner-indicator1"></div>
+                </div>
+            </div>
+
+            <div class="mui-input-row" v-repeat="f in form.fields">
+                <label>{{f}}</label>
+                <input type="text" class="mui-input-clear" name="{{$key}}" placeholder="请输入{{f}}" number required>
+            </div>
+        </form>
+        <h5 style="text-align: center;color:red" v-show="valid">
+            请填写正确！
+        </h5>
+        <input form="formSubmit" class="mui-btn mui-btn-block jui-btn-binding mui-btn-primary" type="submit" value="提交"/>
+    </div>
+
+    <div class="mui-content-padded" style="margin-top:15px;border-top:1px solid #DBDBDD;padding-top:5px;">
+        <h4>温馨提示</h4>
+
+        <p>1. 任何团队或个人未经被绑定户号户主许可，不得绑定他人户号，未经被绑定户号主许可绑定造成的损失和法律责任由绑定者全部承担。</p>
+
+        <p>2. 同一微信号可绑定多个户号</p>
+
+        <p>3. 可以拨打客服热线或者咨询微客服来了解您的绑定信息</p>
+    </div>
+</div>

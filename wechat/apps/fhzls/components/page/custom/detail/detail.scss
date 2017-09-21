@@ -1,0 +1,43 @@
+.rich_media_area_primary {
+  font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
+  position: relative;
+  padding: 15px 15px 15px;
+  background-color: #fff;
+
+  .rich_media_title {
+    margin-bottom: 10px;
+    line-height: 1.4;
+    font-weight: 400;
+    font-size: 24px;
+  }
+
+  .rich_media_meta_list {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 18px;
+    line-height: 20px;
+    font-size: 0;
+
+    em{
+      font-style: normal;
+      color: #8c8c8c;
+    }
+  }
+
+  .rich_media_meta {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .rich_content *{
+    clear: both !important;
+    min-height: 1em !important;
+    white-space: pre-wrap;
+    color: #3e3e3e ;
+    font-size: 16px ;
+    font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif !important;
+  }
+}

@@ -1,0 +1,14 @@
+.page-loading{
+
+  display: table;
+  height: 100%;
+  width: 100%;
+  background-color: #f7f7f7;
+  .section{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: bold;
+  }
+
+}

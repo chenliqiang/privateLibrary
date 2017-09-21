@@ -1,0 +1,23 @@
+<header class="mui-bar mui-bar-nav">
+    <h1 class="mui-title">演示</h1>
+</header>
+<div class="mui-content">
+    <div class="mui-content-padded">
+        <button v-on:tap="launchApp('taobao')" type="button" class="mui-btn mui-btn-primary mui-btn-block">点击启动淘宝</button>
+        <button v-on:tap="launchApp('weibo')" type="button" class="mui-btn mui-btn-success mui-btn-block">点击启动微博</button>
+        <form class="mui-input-group">
+            <div class="mui-input-row">
+                <label>联系人</label>
+                <span id="users"v-on:tap="selectUsers" style="line-height: 40px;cursor: pointer;color: #A9A9A9;">点击选择联系人</span>
+            </div>
+            <div class="mui-input-row" style="height: auto;">
+                <label>消息</label>
+                <textarea v-model="msgdata.text.content" rows="5" placeholder="请输入消息"></textarea>
+            </div>
+            <div class="mui-button-row">
+                <button v-on:tap="send" type="button" class="mui-btn mui-btn-primary" onclick="return false;">发送</button>&nbsp;&nbsp;
+                <button v-on:tap="reset" type="button" class="mui-btn mui-btn-danger" onclick="return false;">重置</button>
+            </div>
+        </form>
+    </div>
+</div>

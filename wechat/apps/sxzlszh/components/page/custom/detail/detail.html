@@ -1,0 +1,12 @@
+<div class="page-info mui-content mui-scroll-wrapper" style="background-color: #fff;height: 100%;overflow-y: auto;">
+    <div class="mui-scroll rich_media_area_primary">
+        <h2 class="rich_media_title" id="activity-name">
+            {{news.title}}
+        </h2>
+        <div class="rich_media_meta_list">
+            <em id="post-date" class="rich_media_meta rich_media_meta_text">{{getDate}} {{config.name}}</em>
+        </div>
+        <div class="rich_content" v-html="content"></div>
+    </div>
+</div>
+

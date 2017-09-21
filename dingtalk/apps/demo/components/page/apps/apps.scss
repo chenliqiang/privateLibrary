@@ -1,0 +1,85 @@
+.apps{
+  .mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body{
+    font-size:12px;
+    margin-top:0;
+  }
+  .mui-grid-view.mui-grid-9 .mui-table-view-cell{
+    padding:0;
+  }
+  .mui-bar{
+    background-color: #ffffff;
+  }
+  .mui-content{
+    .mui-table-view:first-child{
+      margin-top: 0;
+    }
+  }
+  .mui-grid-view.mui-grid-9{
+    background-color: #ffffff;
+  }
+
+  .mui-icon{
+    height: 45px;
+    width: 45px;
+  }
+  .cui-icon-taobao{
+    background: url("/static/images/icons.png") -1px -45px no-repeat;
+    -webkit-background-size: 45px 45px;
+    background-size: 45px;
+  }
+  .cui-icon-weibo{
+    background: url("/static/images/icons.png") -1px -135px no-repeat;
+    -webkit-background-size: 45px 45px;
+    background-size: 45px;
+  }
+  .cui-icon-sbgl{
+    background: url("/static/images/icons.png") -1px -225px no-repeat;
+    -webkit-background-size: 45px 45px;
+    background-size: 45px;
+  }
+  .cui-icon-gcgl{
+    background: url("/static/images/icons.png") -1px -315px no-repeat;
+    -webkit-background-size: 45px 45px;
+    background-size: 45px;
+  }
+  .cui-icon-cwgl{
+    background: url("/static/images/icons.png") -1px -405px no-repeat;
+    -webkit-background-size: 45px 45px;
+    background-size: 45px;
+  }
+  .cui-icon-wzgl{
+    background: url("/static/images/icons.png") -1px -495px no-repeat;
+    -webkit-background-size: 45px 45px;
+    background-size: 45px;
+  }
+  .cui-icon-bgoa{
+    background: url("/static/images/icons.png") -1px -585px no-repeat;
+    -webkit-background-size: 45px 45px;
+    background-size: 45px;
+  }
+  .cui-icon-dagl{
+    background: url("/static/images/icons.png") -1px -675px no-repeat;
+    -webkit-background-size: 45px 45px;
+    background-size: 45px;
+  }
+  .cui-icon-szgl{
+    background: url("/static/images/icons.png") -1px -765px no-repeat;
+    -webkit-background-size: 45px 45px;
+    background-size: 45px;
+  }
+  .cui-icon-gsgis{
+    background: url("/static/images/icons.png") -1px -855px no-repeat;
+    -webkit-background-size: 45px 45px;
+    background-size: 45px;
+  }
+  .cui-icon-psgis{
+    background: url("/static/images/icons.png") -1px -945px no-repeat;
+    -webkit-background-size: 45px 45px;
+    background-size: 45px;
+  }
+  .cui-icon-kfgl{
+    background: url("/static/images/icons.png") -1px -1035px no-repeat;
+    -webkit-background-size: 45px 45px;
+    background-size: 45px;
+  }
+}

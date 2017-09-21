@@ -1,0 +1,30 @@
+<div class="code-detail">
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-icon mui-icon-left-nav mui-pull-left" href="#business/water/blowdown"></a>
+        <h1 class="mui-title">排污量查询</h1>
+    </header>
+    <div class="mui-content">
+        <div class="jui-state-table" style="padding: 0 10px;">
+            <table class="jui-table" style="margin-top: 20px;">
+                <thead>
+                <th style="width:20%;font-size: 14px;">日期</th>
+                <th style="width:25%;font-size: 14px;">抄见值</th>
+                <th style="width:25%;font-size: 14px;">结算量</th>
+                <th style="width:20%;font-size: 14px;">金额</th>
+                </thead>
+            </table>
+        </div>
+        <div class="jui-state-table" style="overflow-y:scroll;padding:0 10px;" v-style="height:table_height">
+            <table class="jui-table">
+                <tbody>
+                <tr v-repeat="l in list">
+                    <td style="width:20%;">{{l.Date}}</td>
+                    <td style="width:25%;">{{l.Reader}}</td>
+                    <td style="width:25%;">{{l.Balance}}</td>
+                    <td style="width:20%;">{{l.Price}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

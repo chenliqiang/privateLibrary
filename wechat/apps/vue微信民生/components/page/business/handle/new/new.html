@@ -1,0 +1,42 @@
+<div class="page-handle-new">
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-icon mui-icon-left-nav mui-pull-left" href="#business/handle"></a>
+        <h1 class="mui-title">新装接水</h1>
+    </header>
+    <div class="mui-content-padded mui-content" >
+        <form class="mui-input-group" id="form">
+            <div class="mui-input-row">
+                <label>用户名称</label>
+                <input type="text" required v-model="form.name" class="mui-input-clear" placeholder="请输入用户名称">
+            </div>
+            <div class="mui-input-row">
+                <label>联&nbsp;&nbsp;系&nbsp;&nbsp;人</label>
+                <input type="text" required  v-model="form.contact" class="mui-input-clear" placeholder="请输入联系人">
+            </div>
+            <div class="mui-input-row">
+                <label>安装地址</label>
+                <input type="text" required v-model="form.addr"  class=" mui-input-clear" placeholder="请输入安装地址">
+            </div>
+            <div class="mui-input-row">
+                <label>固定电话</label>
+                <input type="text"  v-model="form.tel" class="mui-input-clear" placeholder="请输入固定电话" >
+            </div>
+            <div class="mui-input-row">
+                <label>移动电话</label>
+                <input type="text"  v-model="form.mobile" validator="mobile" required='required' class="mui-input-clear" style="padding: 10px 15px 10px 0px;" placeholder="请输入移动电话">
+            </div>
+            <div class="mui-content-padded" style="text-indent: 1em">
+                <p>尊敬的用户，在工作人员上门为您服务时，<span style="color: red;">您需提供以下资料：</span>
+                </p>
+
+                <p>（1）申请人居民身份证；</p>
+                <p>（2）申请人房屋产权所有证；</p>
+                <p>（3）营业执照复印件（经营户提供）；</p>
+                <p>（4）经办人居民身份证；</p>
+                <p>备注：农村无房产证的提供土地使用证及当地村委出具证明。</p>
+                <p id="info"></p>
+            </div>
+        </form>
+        <button type="submit" form="form" id="confirm" class="mui-btn  mui-btn-primary" style="width: 100%">提交</button>
+    </div>
+</div>

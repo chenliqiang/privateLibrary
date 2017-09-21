@@ -1,0 +1,37 @@
+<div class="page-dot mui-custom " >
+    <header class="mui-bar mui-bar-nav">
+        <!--<a class="mui-icon mui-icon-left-nav mui-pull-left" href="#info"></a>-->
+        <h1 class="mui-title">营业网点</h1>
+    </header>
+    <div class="mui-scroll-wrapper"  style="margin-top: 44px;">
+        <div class="mui-scroll" >
+
+            <div class="mui-loading" style="margin-top:20px;" v-if="list.length==0">
+                <div class="mui-spinner">
+                    <div class="mui-spinner-indicator mui-spinner-indicator12"></div>
+                    <div class="mui-spinner-indicator mui-spinner-indicator11"></div>
+                    <div class="mui-spinner-indicator mui-spinner-indicator10"></div>
+                    <div class="mui-spinner-indicator mui-spinner-indicator9"></div>
+                    <div class="mui-spinner-indicator mui-spinner-indicator8"></div>
+                    <div class="mui-spinner-indicator mui-spinner-indicator7"></div>
+                    <div class="mui-spinner-indicator mui-spinner-indicator6"></div>
+                    <div class="mui-spinner-indicator mui-spinner-indicator5"></div>
+                    <div class="mui-spinner-indicator mui-spinner-indicator4"></div>
+                    <div class="mui-spinner-indicator mui-spinner-indicator3"></div>
+                    <div class="mui-spinner-indicator mui-spinner-indicator2"></div>
+                    <div class="mui-spinner-indicator mui-spinner-indicator1"></div>
+                </div>
+            </div>
+            <ul v-show="list.length>0" class="mui-table-view" >
+                <li class="mui-table-view-cell" v-repeat="l in list">
+                    <a class="mui-navigate-right "  v-on="tap:toMap(l._id)">
+                        {{l.name}}
+                        <p>{{l.addr}}</p>
+                        <p>联系电话：{{l.tel}}</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
